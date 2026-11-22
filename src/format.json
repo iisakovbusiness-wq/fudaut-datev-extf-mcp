@@ -1,0 +1,1113 @@
+{
+ "quelle": {
+  "kopfzeile": "https://developer.datev.de/de/file-formats/details/datev-format/format-description/header",
+  "buchungsstapel": "https://developer.datev.de/de/file-formats/details/datev-format/format-description/booking-batch",
+  "musterdaten": "https://developer.datev.de/assets/Musterdaten_DATEV_Format_0_7f9322b9cc.zip",
+  "abgerufen": "2026-10-13",
+  "hinweis": "Nummer, Überschrift und Ausdruck aus der Formatbeschreibung der DATEV eG (Gedankenstriche in Überschriften als Bindestrich normalisiert); Spaltennamen der Zeile 2 aus deren Musterdatei EXTF_Buchungsstapel.csv. Wo die Quelle keinen ausführbaren Ausdruck nennt, steht das Feld angepasst mit Begründung."
+ },
+ "kopf": [
+  {
+   "nr": 1,
+   "feld": "kennzeichen",
+   "ueberschrift": "Kennzeichen",
+   "ausdruck": "^[\"](EXTF|DTVF)[\"]$",
+   "text": true
+  },
+  {
+   "nr": 2,
+   "feld": "versionsnummer",
+   "ueberschrift": "Versionsnummer",
+   "ausdruck": "^(700)$",
+   "text": false
+  },
+  {
+   "nr": 3,
+   "feld": "formatkategorie",
+   "ueberschrift": "Formatkategorie",
+   "ausdruck": "^(16|20|21|46|48|65)$",
+   "text": false
+  },
+  {
+   "nr": 4,
+   "feld": "formatname",
+   "ueberschrift": "Formatname",
+   "ausdruck": "^[\"](Buchungsstapel|Wiederkehrende Buchungen|Debitoren/Kreditoren|Kontenbeschriftungen|Zahlungsbedingungen|Diverse Adressen)[\"]$",
+   "text": true
+  },
+  {
+   "nr": 5,
+   "feld": "formatversion",
+   "ueberschrift": "Formatversion",
+   "ausdruck": "^(2|4|5|13)$",
+   "text": false
+  },
+  {
+   "nr": 6,
+   "feld": "erzeugtAm",
+   "ueberschrift": "Erzeugt am",
+   "ausdruck": "^([2])([0])([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])(2[0-3]|[01][0-9])([0-5][0-9])([0-5][0-9][0-9][0-9][0-9])$",
+   "text": false
+  },
+  {
+   "nr": 7,
+   "feld": "importiert",
+   "ueberschrift": "Importiert",
+   "ausdruck": "^$",
+   "text": false,
+   "angepasst": "Leerfeld; in der Quelle als ^[]$ notiert"
+  },
+  {
+   "nr": 8,
+   "feld": "herkunft",
+   "ueberschrift": "Herkunft",
+   "ausdruck": "^[\"]\\w{0,2}[\"]$",
+   "text": true
+  },
+  {
+   "nr": 9,
+   "feld": "exportiertVon",
+   "ueberschrift": "Exportiert von",
+   "ausdruck": "^[\"]\\w{0,25}[\"]$",
+   "text": true
+  },
+  {
+   "nr": 10,
+   "feld": "importiertVon",
+   "ueberschrift": "Importiert von",
+   "ausdruck": "^[\"]\\w{0,25}[\"]$",
+   "text": true
+  },
+  {
+   "nr": 11,
+   "feld": "beraternummer",
+   "ueberschrift": "Beraternummer",
+   "ausdruck": "^(\\d{4,6}|\\d{7})$",
+   "text": false
+  },
+  {
+   "nr": 12,
+   "feld": "mandantennummer",
+   "ueberschrift": "Mandantennummer",
+   "ausdruck": "^\\d{1,5}$",
+   "text": false
+  },
+  {
+   "nr": 13,
+   "feld": "wjBeginn",
+   "ueberschrift": "WJ-Beginn",
+   "ausdruck": "^([2])([0])([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$",
+   "text": false
+  },
+  {
+   "nr": 14,
+   "feld": "sachkontenlaenge",
+   "ueberschrift": "Sachkontenlänge",
+   "ausdruck": "^[4-8]$",
+   "text": false
+  },
+  {
+   "nr": 15,
+   "feld": "datumVon",
+   "ueberschrift": "Datum von",
+   "ausdruck": "^([2])([0])([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$",
+   "text": false
+  },
+  {
+   "nr": 16,
+   "feld": "datumBis",
+   "ueberschrift": "Datum bis",
+   "ausdruck": "^([2])([0])([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$",
+   "text": false
+  },
+  {
+   "nr": 17,
+   "feld": "bezeichnung",
+   "ueberschrift": "Bezeichnung",
+   "ausdruck": "^[\"][\\w.-/ ]{0,30}[\"]$",
+   "text": true
+  },
+  {
+   "nr": 18,
+   "feld": "diktatkuerzel",
+   "ueberschrift": "Diktatkürzel",
+   "ausdruck": "^[\"]([A-Z]{2}){0,2}[\"]$",
+   "text": true
+  },
+  {
+   "nr": 19,
+   "feld": "buchungstyp",
+   "ueberschrift": "Buchungstyp",
+   "ausdruck": "^[1-2]$",
+   "text": false
+  },
+  {
+   "nr": 20,
+   "feld": "rechnungslegungszweck",
+   "ueberschrift": "Rechnungslegungszweck",
+   "ausdruck": "^(0|30|40|50|64)$",
+   "text": false
+  },
+  {
+   "nr": 21,
+   "feld": "festschreibung",
+   "ueberschrift": "Festschreibung",
+   "ausdruck": "^(0|1)$",
+   "text": false
+  },
+  {
+   "nr": 22,
+   "feld": "wkz",
+   "ueberschrift": "WKZ",
+   "ausdruck": "^[\"]([A-Z]{3})[\"]$",
+   "text": true
+  },
+  {
+   "nr": 23,
+   "feld": "reserviert1",
+   "ueberschrift": "Reserviert",
+   "ausdruck": "^$",
+   "text": false,
+   "angepasst": "Leerfeld; in der Quelle als ^[]$ notiert"
+  },
+  {
+   "nr": 24,
+   "feld": "derivatskennzeichen",
+   "ueberschrift": "Derivatskennzeichen",
+   "ausdruck": "^[\"][\"]$",
+   "text": true
+  },
+  {
+   "nr": 25,
+   "feld": "reserviert2",
+   "ueberschrift": "Reserviert",
+   "ausdruck": "^$",
+   "text": false,
+   "angepasst": "Leerfeld; in der Quelle als ^[]$ notiert"
+  },
+  {
+   "nr": 26,
+   "feld": "reserviert3",
+   "ueberschrift": "Reserviert",
+   "ausdruck": "^$",
+   "text": false,
+   "angepasst": "Leerfeld; in der Quelle als ^[]$ notiert"
+  },
+  {
+   "nr": 27,
+   "feld": "sachkontenrahmen",
+   "ueberschrift": "Sachkontenrahmen",
+   "ausdruck": "^[\"](\\d{2}){0,2}[\"]$",
+   "text": true
+  },
+  {
+   "nr": 28,
+   "feld": "branchenloesungId",
+   "ueberschrift": "ID der Branchenlösung",
+   "ausdruck": "^\\d{0,4}$",
+   "text": false
+  },
+  {
+   "nr": 29,
+   "feld": "reserviert4",
+   "ueberschrift": "Reserviert",
+   "ausdruck": "^$",
+   "text": false,
+   "angepasst": "Leerfeld; in der Quelle als ^[]$ notiert"
+  },
+  {
+   "nr": 30,
+   "feld": "reserviert5",
+   "ueberschrift": "Reserviert",
+   "ausdruck": "^[\"][\"]$",
+   "text": true
+  },
+  {
+   "nr": 31,
+   "feld": "anwendungsinformation",
+   "ueberschrift": "Anwendungsinformation",
+   "ausdruck": "^[\"].{0,16}[\"]$",
+   "text": true
+  }
+ ],
+ "spalten": [
+  {
+   "nr": 1,
+   "name": "Umsatz (ohne Soll/Haben-Kz)",
+   "ueberschrift": "Umsatz",
+   "ausdruck": "^(?!0{1,10}\\,00)\\d{1,10}\\,\\d{2}$",
+   "text": false
+  },
+  {
+   "nr": 2,
+   "name": "Soll/Haben-Kennzeichen",
+   "ueberschrift": "Soll-/Haben-Kennzeichen",
+   "ausdruck": "^[\"](S|H)[\"]$",
+   "text": true
+  },
+  {
+   "nr": 3,
+   "name": "WKZ Umsatz",
+   "ueberschrift": "WKZ Umsatz",
+   "ausdruck": "^[\"]([A-Z]{3})[\"]$",
+   "text": true
+  },
+  {
+   "nr": 4,
+   "name": "Kurs",
+   "ueberschrift": "Kurs",
+   "ausdruck": "^([1-9]\\d{0,3}[,]\\d{2,6})$",
+   "text": false
+  },
+  {
+   "nr": 5,
+   "name": "Basis-Umsatz",
+   "ueberschrift": "Basisumsatz",
+   "ausdruck": "^(?!0{1,10}\\,00)\\d{1,10}\\,\\d{2}$",
+   "text": false
+  },
+  {
+   "nr": 6,
+   "name": "WKZ Basis-Umsatz",
+   "ueberschrift": "WKZ Basisumsatz",
+   "ausdruck": "^[\"]([A-Z]{3})[\"]$",
+   "text": true,
+   "angepasst": "Quelle ohne Ausdruck; Ausdruck von Spalte 3 (ISO-Code der Währung) übernommen"
+  },
+  {
+   "nr": 7,
+   "name": "Konto",
+   "ueberschrift": "Konto",
+   "ausdruck": "^(?!0{1,9}$)(\\d{1,9})$",
+   "text": false
+  },
+  {
+   "nr": 8,
+   "name": "Gegenkonto (ohne BU-Schlüssel)",
+   "ueberschrift": "Gegenkonto (ohne BU-Schlüssel)",
+   "ausdruck": "^(?!0{1,9}$)(\\d{1,9})$",
+   "text": false
+  },
+  {
+   "nr": 9,
+   "name": "BU-Schlüssel",
+   "ueberschrift": "BU-Schlüssel",
+   "ausdruck": "^([\"]\\d{1,4}[\"])$",
+   "text": true,
+   "angepasst": "Quelle verlangt genau vier Ziffern; die Musterdatei von DATEV führt selbst ein- bis vierstellige Schlüssel"
+  },
+  {
+   "nr": 10,
+   "name": "Belegdatum",
+   "ueberschrift": "Belegdatum",
+   "ausdruck": "^(\\d{4})$",
+   "text": false
+  },
+  {
+   "nr": 11,
+   "name": "Belegfeld 1",
+   "ueberschrift": "Belegfeld 1",
+   "ausdruck": "^([\"][\\w$&%*+\\-\\/]{0,36}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 12,
+   "name": "Belegfeld 2",
+   "ueberschrift": "Belegfeld 2",
+   "ausdruck": "^([\"][\\w$&%*+\\-\\/]{0,36}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 13,
+   "name": "Skonto",
+   "ueberschrift": "Skonto",
+   "ausdruck": "^([1-9]\\d{0,7}[,]\\d{2})$",
+   "text": false
+  },
+  {
+   "nr": 14,
+   "name": "Buchungstext",
+   "ueberschrift": "Buchungstext",
+   "ausdruck": "^([\"].{0,60}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 15,
+   "name": "Postensperre",
+   "ueberschrift": "Postensperre",
+   "ausdruck": "^(0|1)$",
+   "text": false
+  },
+  {
+   "nr": 16,
+   "name": "Diverse Adressnummer",
+   "ueberschrift": "Diverse Adressnummer",
+   "ausdruck": "^([\"]\\w{0,9}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 17,
+   "name": "Geschäftspartnerbank",
+   "ueberschrift": "Geschäftspartnerbank",
+   "ausdruck": "^(\\d{3})$",
+   "text": false
+  },
+  {
+   "nr": 18,
+   "name": "Sachverhalt",
+   "ueberschrift": "Sachverhalt",
+   "ausdruck": "^(\\d{2})$",
+   "text": false
+  },
+  {
+   "nr": 19,
+   "name": "Zinssperre",
+   "ueberschrift": "Zinssperre",
+   "ausdruck": "^(0|1)$",
+   "text": false
+  },
+  {
+   "nr": 20,
+   "name": "Beleglink",
+   "ueberschrift": "Beleglink",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true,
+   "angepasst": "Quelle nennt zwei Ausdrücke; hier der allgemeine"
+  },
+  {
+   "nr": 21,
+   "name": "Beleginfo - Art 1",
+   "ueberschrift": "Beleginfo -Art 1",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 22,
+   "name": "Beleginfo - Inhalt 1",
+   "ueberschrift": "Beleginfo -Inhalt 1",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 23,
+   "name": "Beleginfo - Art 2",
+   "ueberschrift": "Beleginfo -Art 2",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 24,
+   "name": "Beleginfo - Inhalt 2",
+   "ueberschrift": "Beleginfo -Inhalt 2",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 25,
+   "name": "Beleginfo - Art 3",
+   "ueberschrift": "Beleginfo -Art 3",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 26,
+   "name": "Beleginfo - Inhalt 3",
+   "ueberschrift": "Beleginfo -Inhalt 3",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 27,
+   "name": "Beleginfo - Art 4",
+   "ueberschrift": "Beleginfo -Art 4",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 28,
+   "name": "Beleginfo - Inhalt 4",
+   "ueberschrift": "Beleginfo -Inhalt 4",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 29,
+   "name": "Beleginfo - Art 5",
+   "ueberschrift": "Beleginfo -Art 5",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 30,
+   "name": "Beleginfo - Inhalt 5",
+   "ueberschrift": "Beleginfo -Inhalt 5",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 31,
+   "name": "Beleginfo - Art 6",
+   "ueberschrift": "Beleginfo -Art 6",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 32,
+   "name": "Beleginfo - Inhalt 6",
+   "ueberschrift": "Beleginfo -Inhalt 6",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 33,
+   "name": "Beleginfo - Art 7",
+   "ueberschrift": "Beleginfo -Art 7",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 34,
+   "name": "Beleginfo - Inhalt 7",
+   "ueberschrift": "Beleginfo -Inhalt 7",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 35,
+   "name": "Beleginfo - Art 8",
+   "ueberschrift": "Beleginfo -Art 8",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 36,
+   "name": "Beleginfo - Inhalt 8",
+   "ueberschrift": "Beleginfo -Inhalt 8",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 37,
+   "name": "KOST1 - Kostenstelle",
+   "ueberschrift": "KOST1 -Kostenstelle",
+   "ausdruck": "^([\"][\\w ]{0,36}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 38,
+   "name": "KOST2 - Kostenstelle",
+   "ueberschrift": "KOST2 -Kostenstelle",
+   "ausdruck": "^([\"][\\w ]{0,36}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 39,
+   "name": "Kost-Menge",
+   "ueberschrift": "KOST-Menge",
+   "ausdruck": "^\\d{12}[,]\\d{4}$",
+   "text": false
+  },
+  {
+   "nr": 40,
+   "name": "EU-Land u. UStID (Bestimmung)",
+   "ueberschrift": "EU-Mitgliedstaat u. UStID (Bestimmung)",
+   "ausdruck": "^([\"].{0,15}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 41,
+   "name": "EU-Steuersatz (Bestimmung)",
+   "ueberschrift": "EU-Steuersatz (Bestimmung)",
+   "ausdruck": "^\\d{2}[,]\\d{2}$",
+   "text": false
+  },
+  {
+   "nr": 42,
+   "name": "Abw. Versteuerungsart",
+   "ueberschrift": "Abw. Versteuerungsart",
+   "ausdruck": "^([\"](I|K|P|S)[\"])$",
+   "text": true
+  },
+  {
+   "nr": 43,
+   "name": "Sachverhalt L+L",
+   "ueberschrift": "Sachverhalt L+L",
+   "ausdruck": "^(\\d{1,3})$",
+   "text": false
+  },
+  {
+   "nr": 44,
+   "name": "Funktionsergänzung L+L",
+   "ueberschrift": "Funktionsergänzung L+L",
+   "ausdruck": "^\\d{0,3}$",
+   "text": false
+  },
+  {
+   "nr": 45,
+   "name": "BU 49 Hauptfunktionstyp",
+   "ueberschrift": "BU 49 Hauptfunktiontyp",
+   "ausdruck": "^\\d$",
+   "text": false
+  },
+  {
+   "nr": 46,
+   "name": "BU 49 Hauptfunktionsnummer",
+   "ueberschrift": "BU 49 Hauptfunktionsnummer",
+   "ausdruck": "^\\d{0,2}$",
+   "text": false
+  },
+  {
+   "nr": 47,
+   "name": "BU 49 Funktionsergänzung",
+   "ueberschrift": "BU 49 Funktionsergänzung",
+   "ausdruck": "^\\d{0,3}$",
+   "text": false
+  },
+  {
+   "nr": 48,
+   "name": "Zusatzinformation - Art 1",
+   "ueberschrift": "Zusatzinformation - Art 1",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 49,
+   "name": "Zusatzinformation- Inhalt 1",
+   "ueberschrift": "Zusatzinformation - Inhalt 1",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 50,
+   "name": "Zusatzinformation - Art 2",
+   "ueberschrift": "Zusatzinformation - Art 2",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 51,
+   "name": "Zusatzinformation- Inhalt 2",
+   "ueberschrift": "Zusatzinformation - Inhalt 2",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 52,
+   "name": "Zusatzinformation - Art 3",
+   "ueberschrift": "Zusatzinformation - Art 3",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 53,
+   "name": "Zusatzinformation- Inhalt 3",
+   "ueberschrift": "Zusatzinformation - Inhalt 3",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 54,
+   "name": "Zusatzinformation - Art 4",
+   "ueberschrift": "Zusatzinformation - Art 4",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 55,
+   "name": "Zusatzinformation- Inhalt 4",
+   "ueberschrift": "Zusatzinformation - Inhalt 4",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 56,
+   "name": "Zusatzinformation - Art 5",
+   "ueberschrift": "Zusatzinformation - Art 5",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 57,
+   "name": "Zusatzinformation- Inhalt 5",
+   "ueberschrift": "Zusatzinformation - Inhalt 5",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 58,
+   "name": "Zusatzinformation - Art 6",
+   "ueberschrift": "Zusatzinformation - Art 6",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 59,
+   "name": "Zusatzinformation- Inhalt 6",
+   "ueberschrift": "Zusatzinformation - Inhalt 6",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 60,
+   "name": "Zusatzinformation - Art 7",
+   "ueberschrift": "Zusatzinformation - Art 7",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 61,
+   "name": "Zusatzinformation- Inhalt 7",
+   "ueberschrift": "Zusatzinformation - Inhalt 7",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 62,
+   "name": "Zusatzinformation - Art 8",
+   "ueberschrift": "Zusatzinformation - Art 8",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 63,
+   "name": "Zusatzinformation- Inhalt 8",
+   "ueberschrift": "Zusatzinformation - Inhalt 8",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 64,
+   "name": "Zusatzinformation - Art 9",
+   "ueberschrift": "Zusatzinformation - Art 9",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 65,
+   "name": "Zusatzinformation- Inhalt 9",
+   "ueberschrift": "Zusatzinformation - Inhalt 9",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 66,
+   "name": "Zusatzinformation - Art 10",
+   "ueberschrift": "Zusatzinformation - Art 10",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 67,
+   "name": "Zusatzinformation- Inhalt 10",
+   "ueberschrift": "Zusatzinformation - Inhalt 10",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 68,
+   "name": "Zusatzinformation - Art 11",
+   "ueberschrift": "Zusatzinformation - Art 11",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 69,
+   "name": "Zusatzinformation- Inhalt 11",
+   "ueberschrift": "Zusatzinformation - Inhalt 11",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 70,
+   "name": "Zusatzinformation - Art 12",
+   "ueberschrift": "Zusatzinformation - Art 12",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 71,
+   "name": "Zusatzinformation- Inhalt 12",
+   "ueberschrift": "Zusatzinformation - Inhalt 12",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 72,
+   "name": "Zusatzinformation - Art 13",
+   "ueberschrift": "Zusatzinformation - Art 13",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 73,
+   "name": "Zusatzinformation- Inhalt 13",
+   "ueberschrift": "Zusatzinformation - Inhalt 13",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 74,
+   "name": "Zusatzinformation - Art 14",
+   "ueberschrift": "Zusatzinformation - Art 14",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 75,
+   "name": "Zusatzinformation- Inhalt 14",
+   "ueberschrift": "Zusatzinformation - Inhalt 14",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 76,
+   "name": "Zusatzinformation - Art 15",
+   "ueberschrift": "Zusatzinformation - Art 15",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 77,
+   "name": "Zusatzinformation- Inhalt 15",
+   "ueberschrift": "Zusatzinformation - Inhalt 15",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 78,
+   "name": "Zusatzinformation - Art 16",
+   "ueberschrift": "Zusatzinformation - Art 16",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 79,
+   "name": "Zusatzinformation- Inhalt 16",
+   "ueberschrift": "Zusatzinformation - Inhalt 16",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 80,
+   "name": "Zusatzinformation - Art 17",
+   "ueberschrift": "Zusatzinformation - Art 17",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 81,
+   "name": "Zusatzinformation- Inhalt 17",
+   "ueberschrift": "Zusatzinformation - Inhalt 17",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 82,
+   "name": "Zusatzinformation - Art 18",
+   "ueberschrift": "Zusatzinformation - Art 18",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 83,
+   "name": "Zusatzinformation- Inhalt 18",
+   "ueberschrift": "Zusatzinformation - Inhalt 18",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 84,
+   "name": "Zusatzinformation - Art 19",
+   "ueberschrift": "Zusatzinformation - Art 19",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 85,
+   "name": "Zusatzinformation- Inhalt 19",
+   "ueberschrift": "Zusatzinformation - Inhalt 19",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 86,
+   "name": "Zusatzinformation - Art 20",
+   "ueberschrift": "Zusatzinformation - Art 20",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 87,
+   "name": "Zusatzinformation- Inhalt 20",
+   "ueberschrift": "Zusatzinformation - Inhalt 20",
+   "ausdruck": "^([\"].{0,210}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 88,
+   "name": "Stück",
+   "ueberschrift": "Stück",
+   "ausdruck": "^\\d{0,8}$",
+   "text": false
+  },
+  {
+   "nr": 89,
+   "name": "Gewicht",
+   "ueberschrift": "Gewicht",
+   "ausdruck": "^(\\d{1,8}[,]\\d{2})$",
+   "text": false
+  },
+  {
+   "nr": 90,
+   "name": "Zahlweise",
+   "ueberschrift": "Zahlweise",
+   "ausdruck": "^\\d{0,2}$",
+   "text": false
+  },
+  {
+   "nr": 91,
+   "name": "Forderungsart",
+   "ueberschrift": "Forderungsart",
+   "ausdruck": "^([\"]\\w{0,10}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 92,
+   "name": "Veranlagungsjahr",
+   "ueberschrift": "Veranlagungsjahr",
+   "ausdruck": "^(([2])([0])([0-9]{2}))$",
+   "text": false
+  },
+  {
+   "nr": 93,
+   "name": "Zugeordnete Fälligkeit",
+   "ueberschrift": "Zugeordnete Fälligkeit",
+   "ausdruck": "^((0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])([2])([0])([0-9]{2}))$",
+   "text": false
+  },
+  {
+   "nr": 94,
+   "name": "Skontotyp",
+   "ueberschrift": "Skontotyp",
+   "ausdruck": "^\\d$",
+   "text": false
+  },
+  {
+   "nr": 95,
+   "name": "Auftragsnummer",
+   "ueberschrift": "Auftragsnummer",
+   "ausdruck": "^([\"].{0,30}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 96,
+   "name": "Buchungstyp",
+   "ueberschrift": "Buchungstyp",
+   "ausdruck": "^([\"][A-Z]{2}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 97,
+   "name": "USt-Schlüssel (Anzahlungen)",
+   "ueberschrift": "USt-Schlüssel (Anzahlungen)",
+   "ausdruck": "^\\d{0,4}$",
+   "text": false
+  },
+  {
+   "nr": 98,
+   "name": "EU-Land (Anzahlungen)",
+   "ueberschrift": "EU-Mitgliedstaat (Anzahlungen)",
+   "ausdruck": "^([\"][A-Z]{2}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 99,
+   "name": "Sachverhalt L+L (Anzahlungen)",
+   "ueberschrift": "Sachverhalt L+L (Anzahlungen)",
+   "ausdruck": "^\\d{0,3}$",
+   "text": false
+  },
+  {
+   "nr": 100,
+   "name": "EU-Steuersatz (Anzahlungen)",
+   "ueberschrift": "EU-Steuersatz (Anzahlungen)",
+   "ausdruck": "^(\\d{1,2}[,]\\d{2})$",
+   "text": false
+  },
+  {
+   "nr": 101,
+   "name": "Erlöskonto (Anzahlungen)",
+   "ueberschrift": "Erlöskonto (Anzahlungen)",
+   "ausdruck": "^(\\d{4,8})$",
+   "text": false
+  },
+  {
+   "nr": 102,
+   "name": "Herkunft-Kz",
+   "ueberschrift": "Herkunft-Kz",
+   "ausdruck": "^([\"][A-Z]{2}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 103,
+   "name": "Buchungs GUID",
+   "ueberschrift": "Leerfeld",
+   "ausdruck": "^([\"].{0,36}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 104,
+   "name": "KOST-Datum",
+   "ueberschrift": "KOST-Datum",
+   "ausdruck": "^((0[1-9]|[1-2]\\d|3[0-1])(0[1-9]|1[0-2])([2])([0])(\\d{2}))$",
+   "text": false
+  },
+  {
+   "nr": 105,
+   "name": "SEPA-Mandatsreferenz",
+   "ueberschrift": "SEPA-Mandatsreferenz",
+   "ausdruck": "^([\"].{0,35}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 106,
+   "name": "Skontosperre",
+   "ueberschrift": "Skontosperre",
+   "ausdruck": "^[0|1]$",
+   "text": false
+  },
+  {
+   "nr": 107,
+   "name": "Gesellschaftername",
+   "ueberschrift": "Gesellschaftername",
+   "ausdruck": "^([\"].{0,76}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 108,
+   "name": "Beteiligtennummer",
+   "ueberschrift": "Beteiligtennummer",
+   "ausdruck": "^(\\d{4})$",
+   "text": false
+  },
+  {
+   "nr": 109,
+   "name": "Identifikationsnummer",
+   "ueberschrift": "Identifikationsnummer",
+   "ausdruck": "^([\"].{0,11}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 110,
+   "name": "Zeichnernummer",
+   "ueberschrift": "Zeichnernummer",
+   "ausdruck": "^([\"].{0,20}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 111,
+   "name": "Postensperre bis",
+   "ueberschrift": "Postensperre bis",
+   "ausdruck": "^((0[1-9]|[1-2]\\d|3[0-1])(0[1-9]|1[0-2])([2])([0])(\\d{2}))$",
+   "text": false
+  },
+  {
+   "nr": 112,
+   "name": "Bezeichnung SoBil-Sachverhalt",
+   "ueberschrift": "Bezeichnung SoBil-Sachverhalt",
+   "ausdruck": "^([\"].{0,30}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 113,
+   "name": "Kennzeichen SoBil-Buchung",
+   "ueberschrift": "Kennzeichen SoBil-Buchung",
+   "ausdruck": "^(\\d{1,2})$",
+   "text": false
+  },
+  {
+   "nr": 114,
+   "name": "Festschreibung",
+   "ueberschrift": "Festschreibung",
+   "ausdruck": "^(0|1)$",
+   "text": false
+  },
+  {
+   "nr": 115,
+   "name": "Leistungsdatum",
+   "ueberschrift": "Leistungsdatum",
+   "ausdruck": "^((0[1-9]|[1-2]\\d|3[0-1])(0[1-9]|1[0-2])([2])([0])(\\d{2}))$",
+   "text": false
+  },
+  {
+   "nr": 116,
+   "name": "Datum Zuord. Steuerperiode",
+   "ueberschrift": "Datum Zuord. Steuerperiode",
+   "ausdruck": "^((0[1-9]|[1-2]\\d|3[0-1])(0[1-9]|1[0-2])([2])([0])(\\d{2}))$",
+   "text": false
+  },
+  {
+   "nr": 117,
+   "name": "Fälligkeit",
+   "ueberschrift": "Fälligkeit",
+   "ausdruck": "^((0[1-9]|[1-2]\\d|3[0-1])(0[1-9]|1[0-2])([2])([0])(\\d{2}))$",
+   "text": false
+  },
+  {
+   "nr": 118,
+   "name": "Generalumkehr (GU)",
+   "ueberschrift": "Generalumkehr",
+   "ausdruck": "^([\"](0|1)[\"])$",
+   "text": true
+  },
+  {
+   "nr": 119,
+   "name": "Steuersatz",
+   "ueberschrift": "Steuersatz",
+   "ausdruck": "^(\\d{1,2}[,]\\d{2})$",
+   "text": false
+  },
+  {
+   "nr": 120,
+   "name": "Land",
+   "ueberschrift": "Land",
+   "ausdruck": "^([\"][A-Z]{2}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 121,
+   "name": "Abrechnungsreferenz",
+   "ueberschrift": "Abrechnungsreferenz",
+   "ausdruck": "^([\"].{0,50}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 122,
+   "name": "BVV-Position",
+   "ueberschrift": "BVV-Position (Betriebsvermögensvergleich)",
+   "ausdruck": "^([1|2|3|4|5])$",
+   "text": false
+  },
+  {
+   "nr": 123,
+   "name": "EU-Land u. UStID (Ursprung)",
+   "ueberschrift": "EU-Mitgliedstaat u. UStID (Ursprung)",
+   "ausdruck": "^([\"].{0,15}[\"])$",
+   "text": true
+  },
+  {
+   "nr": 124,
+   "name": "EU-Steuersatz (Ursprung)",
+   "ueberschrift": "EU-Steuersatz (Ursprung)",
+   "ausdruck": "^\\d{2}[,]\\d{2}$",
+   "text": false
+  },
+  {
+   "nr": 125,
+   "name": "Abw. Skontokonto",
+   "ueberschrift": "Abw. Skontokonto",
+   "ausdruck": "^(\\d{1,9})$",
+   "text": false
+  }
+ ]
+}

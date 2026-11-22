@@ -1,0 +1,52 @@
+{
+  "name": "fudaut-datev-extf-mcp",
+  "version": "1.0.0",
+  "mcpName": "io.github.iisakovbusiness-wq/fudaut-datev-extf-mcp",
+  "description": "MIT-licensed local stdio MCP server for reading, validating, searching, balancing, and writing DATEV EXTF accounting batches (Buchungsstapel, Formatkategorie 21).",
+  "license": "MIT",
+  "author": "Ilia Isakov, Fudaut (https://www.fudaut.com)",
+  "type": "module",
+  "bin": {
+    "fudaut-datev-extf-mcp": "src/server.mjs",
+    "datev-stapel-mcp": "src/server.mjs"
+  },
+  "files": [
+    "src/",
+    "beispiel/",
+    "server.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iisakovbusiness-wq/fudaut-datev-extf-mcp.git"
+  },
+  "homepage": "https://www.fudaut.com/de/belegeingang",
+  "bugs": {
+    "url": "https://github.com/iisakovbusiness-wq/fudaut-datev-extf-mcp/issues"
+  },
+  "keywords": [
+    "datev",
+    "extf",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "accounting",
+    "buchungsstapel",
+    "germany",
+    "claude-code"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test test/extf.test.mjs test/server.test.mjs",
+    "beispiel": "node beispiel/erzeugen.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/client": "^2.3.1",
+    "@modelcontextprotocol/server": "^2.3.1",
+    "zod": "^4.6.7"
+  }
+}

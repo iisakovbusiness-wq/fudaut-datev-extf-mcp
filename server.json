@@ -1,0 +1,40 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.iisakovbusiness-wq/fudaut-datev-extf-mcp",
+  "title": "DATEV EXTF Buchungsstapel MCP Server",
+  "description": "MCP server for reading, validating, balancing, and writing DATEV EXTF accounting batches.",
+  "websiteUrl": "https://www.fudaut.com/de/belegeingang",
+  "repository": {
+    "url": "https://github.com/iisakovbusiness-wq/fudaut-datev-extf-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "fudaut-datev-extf-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "DATEV_STAPEL_ORDNER",
+          "description": "Allowed root directory for DATEV EXTF files (defaults to current working directory).",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": false
+        },
+        {
+          "name": "DATEV_STAPEL_SCHREIBEN",
+          "description": "Set to 1 to explicitly enable writing new EXTF_ files (read-only by default).",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}
