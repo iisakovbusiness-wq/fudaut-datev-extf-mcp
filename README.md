@@ -4,6 +4,8 @@
 
 [English](#english) | [Deutsch](#deutsch)
 
+[![Glama MCP Server](https://glama.ai/mcp/servers/iisakovbusiness-wq/fudaut-datev-extf-mcp/badges/score.svg)](https://glama.ai/mcp/servers/iisakovbusiness-wq/fudaut-datev-extf-mcp)
+
 ---
 
 ## English
