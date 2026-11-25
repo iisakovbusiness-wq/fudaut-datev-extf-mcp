@@ -6,6 +6,8 @@
 
 [![Glama MCP Server](https://glama.ai/mcp/servers/iisakovbusiness-wq/fudaut-datev-extf-mcp/badges/score.svg)](https://glama.ai/mcp/servers/iisakovbusiness-wq/fudaut-datev-extf-mcp)
 
+> **Try it in your browser (100 % client-side, zero server upload):** [fudaut.com/en/datev-check](https://www.fudaut.com/en/datev-check) · [fudaut.com/de/datev-check](https://www.fudaut.com/de/datev-check)
+
 ---
 
 ## English
@@ -111,6 +113,8 @@ Need a production document intake or ERP handoff, one-off or as managed monthly 
 ---
 
 ## Deutsch
+
+> **Direkt im Browser testen (100 % lokal im Browser, null Server-Upload):** [fudaut.com/de/datev-check](https://www.fudaut.com/de/datev-check)
 
 `fudaut-datev-extf-mcp` ist ein lokal über `stdio` laufender Open-Source-MCP-Server (MIT-Lizenz) für **DATEV-Buchungsstapel im EXTF-Format** (`Versionsnummer 700`, `Formatkategorie 21`). Ein KI-Assistent mit MCP-Anschluss (Claude Code, Claude Desktop, Cursor) kann damit Buchungsstapel deterministisch prüfen, lesen, filtern, Kontensalden bilden und neue Stapel schreiben, ohne das Dateiformat raten zu müssen. Der Server baut keine Netzwerkverbindungen auf und rechnet ausschließlich ganzzahlig in Cent.
 
